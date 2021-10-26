@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input tpye="text" name="pole"/>
+        <button type="submit">Pokaż</button>
+    </form>
+    <div class="wynik"></div>    
+
+    <script>
+        //odwołujemy sie do formularza
+        const formularz = document.querySelector('form');
+        //pobieramy diva o klasie wynik
+        const wynik=document.querySelector('.wynik');
+        // do zdarzenia submit przypisujemy funkcje ktora przegladarka uruchomi w momencie pojawienia sie tego zdarzenia
+        formularz.addEventListener('submit',(e)=>{
+            //zatrzymujemy domyslne dzialanie przegladarki na formularzu
+            e.preventDefault();
+            //odwołujemy sie do pola w formularzu 
+
+
+
+
+
+            const poleWformularzu=document.querySelector('input[name="pole"]').value;
+            //wyswietlamy w divie wartosc pola
+            wynik.textContent=poleWformularzu;
+
+
+                if(poleWformularzu %2 == 0){
+                    wynik.textContent='liczba jest parzysta';
+                }else{    
+                    wynik.textContent='liczba nie parzysta';
+                }
+
+            
+        });
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
