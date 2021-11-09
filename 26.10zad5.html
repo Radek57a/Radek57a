@@ -7,46 +7,57 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <input type="text" name="pole">
-        <button type="submit">Pokaż</button>
-    </form>
+    
 
     <div class="wynik"></div>
         <script>
-            const a = prompt('Podaj pierwszą liczbe w przedziale');
-            const b = prompt('Podaj druga liczbe w przedziale');
-            const c = prompt('Podaj trzecia liczbe w przedziale');
-            // odwołujemy sie do formularza
-            const formularz = document.querySelector('form');
-            //pobieramy div o klasie wynik
-            const wynik = document.querySelector('.wynik');
-            //do zdarzenia submit i formularza przypisujemy funkcje ktora przeglądarka uruchomi w momencie pojawienia sie
-            formularz.addEventListener('submit', (e) => {
-                //zatrzymujemy domyślne działanie przeglądarki na formularzu
-                e.preventDefault();
-
-
+            const a = prompt('Podaj 1 liczbe');
+            const b = prompt('Podaj 2 liczbe');
+            const c = prompt('Podaj 3 liczbe');
+            
+            const wynik = document.querySelector('.wynik');     
                 
-                //odwołujemy sie do pola w formularzu
-                const pole_w_formularzu = document.querySelector('input[name = "pole"]').value;
-                //wyświetlamy w divie wartość pola
-                if(a>b)
+                if(a > b)
                 {
-                    else if(a>c)
+                    if(a > c)
                     {
-
+                        if(b > c)
+                        {
+                            wynik.textContent = c + ' ' + b + ' ' + a;
+                        }
+                        else
+                        {
+                            wynik.textContent = b + ' ' + c + ' ' + a;
+                        }
                     }
-                   
+                    else
+                    {
+                        wynik.textContent = b + ' ' + a + ' ' + c;
+                    }
+                }
+                else if (b > c)
+                {
+                    if(a > c)
+                    {
+                        wynik.textContent = c + ' ' + a + ' ' + b;
+                    }
+                    else
+                    {
+                        wynik.textContent = a + ' ' + c + ' ' + b;
+                    }
                 }
                 else
                 {
-                    wynik.textContent = 'Liczba nie znajduje się w przedziale';
+                    if(b > a)
+                    {
+                        wynik.textContent = a + ' ' + b + ' ' + c;
+                    }
+                    else
+                    {
+                        wynik.textContent = b + ' ' + a + ' ' + c;
+                    }
                 }
-               
-                
-        
-            });
+    
         </script>
     
 </body>
