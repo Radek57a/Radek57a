@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+class Osoba
+{
+public:
+    string nazwisko;
+    string imie;
+    int wiek;
+    int ocena;
+
+    int n;
+
+void wyswietl_dane(Osoba *tab){
+
+    for (int i=0;i<n;i++){
+        cout<<"Podaj imie: ";
+        cin>> tab[i].imie;
+        cout<<"Podaj nazwisko: ";
+        cin>> tab[i].nazwisko;
+        cout<<"Podaj wiek: ";
+        cin>> tab[i].wiek;
+        cout<<"Podaj ocena: ";
+        cin>> tab[i].ocena;
+        cout<<endl;
+
+    }
+
+}
+
+void ocena(Osoba *tab,int n){
+
+    for(int i=0;i<n;i++){
+
+        cout<<tab[i].imie<<" "<<tab[i].nazwisko<<" ocena: "<<tab[i].ocena<<endl;
+
+
+
+    }
+ }
+};
+
+int main (){
+
+  wyswietl_dane(tab);
+  ocena(tab);
+
+
+
+
+
+    delete[] tab;
+}
