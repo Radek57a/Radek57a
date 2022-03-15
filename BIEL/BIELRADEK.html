@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super strona</title>
+</head>
+<body>
+
+    <div>
+
+
+    </div>
+
+   <script src="samochod.js"></script>
+   <script src="komis.js"></script>
+   <script>
+       //tutaj bedziemy pisac
+       //tworzymy obiekt
+
+         const audi = new samochod('audi','A3',12000,2003,15);
+        // console.log(audi.wiek());
+       
+
+         const kia= new samochod('kia','sportage',19000,2015,8);
+        //  console.log(kia.wiek());
+        // conole.log(kia.koszt())
+
+        const asso = new komis('asso');
+        console.log(asso);
+        asso.dodajSamochod(kia);
+        console.log(asso);
+        asso.dodajSamochod(audi);
+        console.log(asso);
+
+        const ford= new samochod('ford','fusion',9000,2006,11);
+
+        asso.dodajSamochod(ford);
+
+        asso.wyswietlSamochody();
+
+
+   
+
+   </script>
+</body>
+</html>
