@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Podaj imie <input type="text" name="imie"><br>
+        Podaj nazwisko <input type="text" name="nazwisko"><br>
+        Podaj adres <input type="text" name="adres"><br>
+        Podaj telefon <input type="number" name="telefon"><br>
+        Podaj email <input type="email" name="email"><br>
+        Wybierz czcionke <select name="czcionka">
+            <option value="czc1">czc1</option>
+            <option value="czc2">czc2</option>
+            <option value="czc3">czc3</option>
+            <option value="czc4">czc4</option>
+        </select><br>
+        
+
+        <input type="submit" name="zatwierdz">
+    </form>   
+
+    <div></div>
+    <script>
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+        const imie = document.querySelector('input[name="imie"]');
+        const nazwisko = document.querySelector('input[name="nazwisko"]');
+        const adres = document.querySelector('input[name="adres"]');
+        const telefon = document.querySelector('input[name="telefon"]');
+        const email = document.querySelector('input[name="email"]');
+        const czcionka =document.querySelector('input[name="czcionka"]');
+
+
+
+
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+           
+            document.writeln(imie.value); 
+            document.writeln(nazwisko.value);
+            document.writeln(adres.value);
+        });
+       
+        
+
+
+        </script>
+
+        
+
+
+
+
+
+
+
+    
+</body>
+</html>
